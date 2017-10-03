@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -26,7 +26,44 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>*@
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="top-menu">
+                <ul class="nav navbar-nav top-menu">
+                    <li class="activePage"><a href="Operation.html">Operation</a></li>
+                    <li><a href="Continuous-improvement-and-safety.html">Continuous improvement and safety</a></li>
+                    <li><a href="financials.html">Financials</a></li>
+                    <li><a href="Social-activity.html">Social activity</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- weather widget start -->
+                    <a target="_blank" href="http://www.booked.net/weather/columbus-618"><img src="https://w.bookcdn.com/weather/picture/26_618_0_1_ff0000_250_ff0000_ffffff_ffffff_1_ff0000_ffffff_0_6.png?scode=2&domid=w209&anc_id=64080" alt="booked.net" /></a><!-- weather widget end -->
+                    <iframe src="http://free.timeanddate.com/clock/i5wsysum/n805/fcfff/tcf00/pcf00/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="87" height="34"></iframe>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
