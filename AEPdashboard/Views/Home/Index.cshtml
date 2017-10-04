@@ -1,28 +1,18 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+}"
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Plotly.js -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-    <!-- Plotly.js -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-    <style>
-   
+@*<style>
     /* On small screens, set height to 'auto' for sidenav and grid */
     media screen and (max-width: 767px) {
-      .sidenav {
+        .sidenav{
         height: auto;
         padding: 15px;
-      }
+    }
     /* unvisited link white */
     #top-menu a:link {
         color: #ffffff;
@@ -41,75 +31,50 @@
     }
     /* !IMPORTANT ONLY ADD THIS CLASS TO YOUR ACTIVE PAGE LINK ( Color dark red )*/
     .activePage a {
-      color: #8b0000 !IMPORTANT
-      }
+        color: #8b0000 !IMPORTANT
     }
-    </style>
-</head>
-<body>
+    #top-menu
 
-    
-                    <h1>Operation</h1>
-                   
+    }
+</style>*@
 
-                    <!-- Plotly chart will be drawn inside this DIV -->
-                    <div id="myDiv"></div>
-                    <script>
-                        /* JAVASCRIPT CODE GOES HERE */
-                        Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv", function (err, rows) {
+<!-- Plotly chart will be drawn inside this DIV -->
+<div id="myDiv"></div>
+<script>
+    /* JAVASCRIPT CODE GOES HERE */
+    Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
+        function (err, rows) {
 
-                            function unpack(rows, key) {
-                                return rows.map(function (row) { return row[key]; });
-                            }
+            function unpack(rows, key) {
+                return rows.map(function (row) { return row[key]; });
+            }
 
+            var trace1 = {
+                type: "scatter",
+                mode: "lines",
+                name: 'AAPL High',
+                x: unpack(rows, 'Date'),
+                y: unpack(rows, 'AAPL.High'),
+                line: { color: '#17BECF' }
+            }
 
-                            var trace1 = {
-                                type: "scatter",
-                                mode: "lines",
-                                name: 'AAPL High',
-                                x: unpack(rows, 'Date'),
-                                y: unpack(rows, 'AAPL.High'),
-                                line: { color: '#17BECF' }
-                            }
+            var trace2 = {
+                type: "scatter",
+                mode: "lines",
+                name: 'AAPL Low',
+                x: unpack(rows, 'Date'),
+                y: unpack(rows, 'AAPL.Low'),
+                line: { color: '#7F7F7F' }
+            }
 
-                            var trace2 = {
-                                type: "scatter",
-                                mode: "lines",
-                                name: 'AAPL Low',
-                                x: unpack(rows, 'Date'),
-                                y: unpack(rows, 'AAPL.Low'),
-                                line: { color: '#7F7F7F' }
-                            }
+            var data = [trace1, trace2];
 
-                            var data = [trace1, trace2];
+            var layout = {
+                title: 'Basic Time Series',
+            };
 
-                            var layout = {
-                                title: 'Basic Time Series',
-                            };
+            Plotly.newPlot('myDiv', data, layout);
+        })
+</script>
 
-                            Plotly.newPlot('myDiv', data, layout);
-                        })
-                    </script>
-
-                    <hr>
-
-            </div>
-            <div class="col-sm-2 sidenav">
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <footer class="container-fluid text-center">
-
-            <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
-            <small><i><a href="" target="_blank" rel="nofollow">more Quotes</a></i></small>
-        </footer>
-
-</body>
-</html>
+<hr>

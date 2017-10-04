@@ -1,5 +1,4 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -8,6 +7,11 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.top-nav {
+    background-color: #FF0000;
+}
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -22,3 +26,5 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
