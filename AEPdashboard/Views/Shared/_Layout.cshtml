@@ -21,13 +21,13 @@
             </div>
             <div class="collapse navbar-collapse" id="top-menu">
                 <ul class="nav navbar-nav top-menu">
-                    <li><a href="../Home/Index.cshtml">HomePage</a></li>
-                    <li>@Html.ActionLink("homeeeesss", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
-                    <li><a href="Continuous-improvement-and-safety.html">Continuous improvement and safety</a></li>
-                    <li><a href="financials.html">Financials</a></li>
-                    <li><a href="/Views/Shared/Error.cshtml">ErrorPagee</a></li>
-                    <li>@Html.ActionLink("AboutPages", "Index", "About", new { area = "" }, new { @class = "navbar-brand" })</li>
-                    <li><a href="Social-activity.html">Social activity</a></li>
+                    @*<li><a href="../Home/Index.cshtml">HomePage</a></li>*@
+                    <li>@Html.ActionLink("Operations", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    <li><a href="Continuous-improvement-and-safety.html">Safety and Improvement</a></li>
+                    <li><a href="financials.html">Financial</a></li>
+                    @*<li><a href="/Views/Shared/Error.cshtml">ErrorPagee</a></li>*@
+                    <li><a href="Social-activity.html">Social Activity</a></li>
+                    <li>@Html.ActionLink("About", "Index", "About", new { area = "" }, new { @class = "navbar-brand" })</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
