@@ -8,7 +8,7 @@ namespace AEPdashboard.Controllers
 {
     public class FinancialController : Controller
     {
-        // GET: finencial
+        // GET: Financial
         public ActionResult Index()
         {
             return View();
