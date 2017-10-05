@@ -2,141 +2,63 @@
 @{
     ViewBag.Title = "ImprovementNSafety";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Plotly.js -->
+   
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-</head>
-    <h2>ImprovementNSafety</h2>
+    
+                <div id="myDiv"></div>
+                <script>
+                    /* JAVASCRIPT CODE GOES HERE */
+                    var y = ['day 1', 'day 1', 'day 1', 'day 1', 'day 1', 'day 1',
+                        'day 2', 'day 2', 'day 2', 'day 2', 'day 2', 'day 2']
 
-    <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Logo</a>
-                </div>
-                <div class="collapse navbar-collapse" id="top-menu">
-                    <ul class="nav navbar-nav top-menu">
-                        <li class="activePage"><a href="Operation.html">Operation</a></li>
-                        <li><a href="Continuous-improvement-and-safety.html">Continuous improvement and safety</a></li>
-                        <li><a href="financials.html">Financials</a></li>
-                        <li><a href="Social-activity.html">Social activity</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                    var trace1 = {
+                        x: [0.2, 0.2, 0.6, 1.0, 0.5, 0.4, 0.2, 0.7, 0.9, 0.1, 0.5, 0.3],
+                        y: y,
+                        name: 'kale',
+                        marker: { color: '#3D9970' },
+                        type: 'box',
+                        boxmean: false,
+                        orientation: 'h'
+                    };
 
-                        <!-- weather widget start -->
-                        <a target="_blank" href="http://www.booked.net/weather/columbus-618"><img src="https://w.bookcdn.com/weather/picture/26_618_0_1_ff0000_250_ff0000_ffffff_ffffff_1_ff0000_ffffff_0_6.png?scode=2&domid=w209&anc_id=64080" alt="booked.net" /></a><!-- weather widget end -->
-                        <iframe src="http://free.timeanddate.com/clock/i5wsysum/n805/fcfff/tcf00/pcf00/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="87" height="34"></iframe>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container-fluid text-center">
-            <div class="row content">
-                <div class="col-sm-2 sidenav">
-                    <p><a href="#">Link</a></p>
-                    <p><a href="#">Link</a></p>
-                    <p><a href="#">Link</a></p>
-                </div>
-                <div class="col-sm-8 text-left">
+                    var trace2 = {
+                        x: [0.6, 0.7, 0.3, 0.6, 0.0, 0.5, 0.7, 0.9, 0.5, 0.8, 0.7, 0.2],
+                        y: y,
+                        name: 'radishes',
+                        marker: { color: '#FF4136' },
+                        type: 'box',
+                        boxmean: false,
+                        orientation: 'h'
+                    };
 
-                    <h1>Continuous Improvement and Safety</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    var trace3 = {
+                        x: [0.1, 0.3, 0.1, 0.9, 0.6, 0.6, 0.9, 1.0, 0.3, 0.6, 0.8, 0.5],
+                        y: y,
+                        name: 'carrots',
+                        marker: { color: '#FF851B' },
+                        type: 'box',
+                        boxmean: false,
+                        orientation: 'h'
+                    };
 
+                    var data = [trace1, trace2, trace3];
 
-                    <!-- Plotly chart will be drawn inside this DIV -->
-                    <div id="myDiv"></div>
-                    <script>
-                        /* JAVASCRIPT CODE GOES HERE */
-                        var y = ['day 1', 'day 1', 'day 1', 'day 1', 'day 1', 'day 1',
-                            'day 2', 'day 2', 'day 2', 'day 2', 'day 2', 'day 2']
+                    var layout = {
+                        title: 'Grouped Horizontal Box Plot',
+                        xaxis: {
+                            title: 'normalized moisture',
+                            zeroline: false
+                        },
+                        boxmode: 'group'
+                    };
 
-                        var trace1 = {
-                            x: [0.2, 0.2, 0.6, 1.0, 0.5, 0.4, 0.2, 0.7, 0.9, 0.1, 0.5, 0.3],
-                            y: y,
-                            name: 'kale',
-                            marker: { color: '#3D9970' },
-                            type: 'box',
-                            boxmean: false,
-                            orientation: 'h'
-                        };
+                    Plotly.newPlot('myDiv', data, layout);
 
-                        var trace2 = {
-                            x: [0.6, 0.7, 0.3, 0.6, 0.0, 0.5, 0.7, 0.9, 0.5, 0.8, 0.7, 0.2],
-                            y: y,
-                            name: 'radishes',
-                            marker: { color: '#FF4136' },
-                            type: 'box',
-                            boxmean: false,
-                            orientation: 'h'
-                        };
-
-                        var trace3 = {
-                            x: [0.1, 0.3, 0.1, 0.9, 0.6, 0.6, 0.9, 1.0, 0.3, 0.6, 0.8, 0.5],
-                            y: y,
-                            name: 'carrots',
-                            marker: { color: '#FF851B' },
-                            type: 'box',
-                            boxmean: false,
-                            orientation: 'h'
-                        };
-
-                        var data = [trace1, trace2, trace3];
-
-                        var layout = {
-                            title: 'Grouped Horizontal Box Plot',
-                            xaxis: {
-                                title: 'normalized moisture',
-                                zeroline: false
-                            },
-                            boxmode: 'group'
-                        };
-
-                        Plotly.newPlot('myDiv', data, layout);
-
-                    </script>
+                </script>
 
 
 
 
 
-
-
-
-
-                    <hr>
-
-                </div>
-                <div class="col-sm-2 sidenav">
-                    <div class="well">
-                        <p>ADS</p>
-                    </div>
-                    <div class="well">
-                        <p>ADS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer class="container-fluid text-center">
-
-            <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
-            <small><i><a href="" target="_blank" rel="nofollow">more Quotes</a></i></small>
-        </footer>
-
-    </body>
-</html>
