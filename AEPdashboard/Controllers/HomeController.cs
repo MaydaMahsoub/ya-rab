@@ -13,6 +13,21 @@ namespace AEPdashboard.Controllers
             return View();
         }
 
+        public ActionResult IS()
+        {
+            return View();
+        }
+
+        public ActionResult Financial()
+        {
+            return View();
+        }
+
+        public ActionResult Socialactivity()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,11 +35,11 @@ namespace AEPdashboard.Controllers
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+        //    return View();
+        //}
     }
 }
