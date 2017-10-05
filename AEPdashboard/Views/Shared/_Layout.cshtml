@@ -29,18 +29,19 @@
                     <li><a href="Social-activity.html">Social Activity</a></li>
                     <li>@Html.ActionLink("About", "Index", "About", new { area = "" }, new { @class = "navbar-brand" })</li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <nav class="nav navbar-nav navbar-right">
 
                     <!-- weather widget start -->
                     <a target="_blank" href="http://www.booked.net/weather/columbus-618"><img src="https://w.bookcdn.com/weather/picture/26_618_0_1_ff0000_250_ff0000_ffffff_ffffff_1_ff0000_ffffff_0_6.png?scode=2&domid=w209&anc_id=64080" alt="booked.net" /></a><!-- weather widget end -->
                     <iframe src="http://free.timeanddate.com/clock/i5wsysum/n805/fcfff/tcf00/pcf00/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="87" height="34"></iframe>
-                </ul>
+                </nav>
             </div>
         </div>
     </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
+
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
