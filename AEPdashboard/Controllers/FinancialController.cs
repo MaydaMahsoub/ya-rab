@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace AEPdashboard.Controllers
 {
-    public class finencialController : Controller
+    public class FinancialController : Controller
     {
         // GET: finencial
         public ActionResult Index()

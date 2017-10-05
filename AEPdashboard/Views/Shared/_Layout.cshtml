@@ -23,10 +23,10 @@
                 <ul class="nav navbar-nav top-menu">
                     @*<li><a href="../Home/Index.cshtml">HomePage</a></li>*@
                     <li>@Html.ActionLink("Operations", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
-                    <li><a href="Continuous-improvement-and-safety.html">Safety and Improvement</a></li>
-                    <li><a href="financials.html">Financial</a></li>
+                    <li>@Html.ActionLink("Improvement & Safety", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Financial", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                     @*<li><a href="/Views/Shared/Error.cshtml">ErrorPagee</a></li>*@
-                    <li><a href="Social-activity.html">Social Activity</a></li>
+                    <li>@Html.ActionLink("Social Activity", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                     <li>@Html.ActionLink("About", "Index", "About", new { area = "" }, new { @class = "navbar-brand" })</li>
                 </ul>
                 <nav class="nav navbar-nav navbar-right">
@@ -39,6 +39,7 @@
         </div>
     </nav>
     <div class="container body-content">
+        <h2>@ViewBag.Title</h2>
         @RenderBody()
         <hr />
 
