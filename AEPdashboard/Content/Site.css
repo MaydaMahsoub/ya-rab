@@ -26,5 +26,7 @@ select,
 textarea {
     max-width: 280px;
 }
-
+.footer {
+    background-color: #ff0000;
+}
 

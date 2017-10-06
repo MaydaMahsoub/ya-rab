@@ -21,7 +21,7 @@
                 <img src="/Pictures/AEP_Tag_RGB.jpg">
             </div>
             <div class="collapse navbar-collapse" id="top-menu">
-                <ul class="nav navbar-nav top-menu">
+                  <ul class="nav navbar-nav top-menu">
                     @*<li><a href="../Home/Index.cshtml">HomePage</a></li>*@
                     <li>@Html.ActionLink("Operations", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                     <li>@Html.ActionLink("Improvement & Safety", "IS", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
@@ -44,9 +44,11 @@
         @RenderBody()
         <hr />
 
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        <footer class="container-fluid text-center">
+           
+                <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
+                <small><i><a href="" target="_blank" rel="nofollow">more Quotes</a></i></small>
+</footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
