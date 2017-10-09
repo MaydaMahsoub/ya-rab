@@ -1,79 +1,79 @@
 ﻿@{
-    ViewBag.Title = "Operations";
-}
+    ViewBag.Title = "Operations"; 
+    }
 
-<!-- Plotly.js -->
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-@*<style>
-        /* On small screens, set height to 'auto' for sidenav and grid */
-        media screen and (max-width: 767px) {
-            .sidenav{
-            height: auto;
-            padding: 15px;
-        }
-        /* unvisited link white */
-        #top-menu a:link {
-            color: #ffffff;
-        }
-        /* visited link white */
-        #top-menu a:visited {
-            color: #ffffff;
-        }
-        /* mouse over link grey */
-        #top-menu a:hover {
-            color: #777777;
-        }
-        /* selected link grey */
-        #top-menu a:active {
-            color: #777777;
-        }
-        /* !IMPORTANT ONLY ADD THIS CLASS TO YOUR ACTIVE PAGE LINK ( Color dark red )*/
-        .activePage a {
-            color: #8b0000 !IMPORTANT
-        }
-        #top-menu
-
-        }
-    </style>*@
-
-<!-- Plotly chart will be drawn inside this DIV -->
-<div id="myDiv"></div>
-<script>
-    /* JAVASCRIPT CODE GOES HERE */
-    Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
-        function (err, rows) {
-
-            function unpack(rows, key) {
-                return rows.map(function (row) { return row[key]; });
+    @*<style>
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            media screen and (max-width: 767px) {
+                .sidenav{
+                height: auto;
+                padding: 15px;
             }
-
-            var trace1 = {
-                type: "scatter",
-                mode: "lines",
-                name: 'AAPL High',
-                x: unpack(rows, 'Date'),
-                y: unpack(rows, 'AAPL.High'),
-                line: { color: '#17BECF' }
+            /* unvisited link white */
+            #top-menu a:link {
+                color: #ffffff;
             }
-
-            var trace2 = {
-                type: "scatter",
-                mode: "lines",
-                name: 'AAPL Low',
-                x: unpack(rows, 'Date'),
-                y: unpack(rows, 'AAPL.Low'),
-                line: { color: '#7F7F7F' }
+            /* visited link white */
+            #top-menu a:visited {
+                color: #ffffff;
             }
+            /* mouse over link grey */
+            #top-menu a:hover {
+                color: #777777;
+            }
+            /* selected link grey */
+            #top-menu a:active {
+                color: #777777;
+            }
+            /* !IMPORTANT ONLY ADD THIS CLASS TO YOUR ACTIVE PAGE LINK ( Color dark red )*/
+            .activePage a {
+                color: #8b0000 !IMPORTANT
+            }
+            #top-menu
 
-            var data = [trace1, trace2];
+            }
+        </style>*@
 
-            var layout = {
-                title: '# of critical incidents resolved',
-            };
+    <!-- Plotly chart will be drawn inside this DIV -->
+    <div id="myDiv"></div>
+    <script>
+        /* JAVASCRIPT CODE GOES HERE */
+        Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
+            function (err, rows) {
 
-            Plotly.newPlot('myDiv', data, layout);
-        })
-</script>
+                function unpack(rows, key) {
+                    return rows.map(function (row) { return row[key]; });
+                }
 
-<hr>
+                var trace1 = {
+                    type: "scatter",
+                    mode: "lines",
+                    name: 'AAPL High',
+                    x: unpack(rows, 'Date'),
+                    y: unpack(rows, 'AAPL.High'),
+                    line: { color: '#17BECF' }
+                }
+
+                var trace2 = {
+                    type: "scatter",
+                    mode: "lines",
+                    name: 'AAPL Low',
+                    x: unpack(rows, 'Date'),
+                    y: unpack(rows, 'AAPL.Low'),
+                    line: { color: '#7F7F7F' }
+                }
+
+                var data = [trace1, trace2];
+
+                var layout = {
+                    title: '# of critical incidents resolved',
+                };
+
+                Plotly.newPlot('myDiv', data, layout);
+            })
+    </script>
+
+    <hr>
