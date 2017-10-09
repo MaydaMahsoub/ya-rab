@@ -7,8 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-
+<body>    
     <nav class="navbar navbar-inverse top-nav">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -19,7 +18,8 @@
                 </button>
                 <a class="navbar-brand"></a>
                 <img src="/Pictures/AEP_Tag_RGB.jpg">
-            </div>
+               </div>
+
             <div class="collapse navbar-collapse" id="top-menu">
                   <ul class="nav navbar-nav top-menu">
                     @*<li><a href="../Home/Index.cshtml">HomePage</a></li>*@
@@ -28,7 +28,7 @@
                     <li>@Html.ActionLink("Financial", "Financial", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
                     @*<li><a href="/Views/Shared/Error.cshtml">ErrorPagee</a></li>*@
                     <li>@Html.ActionLink("Social Activity", "Socialactivity", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    
                 </ul>
                 <nav class="nav navbar-nav navbar-right">
 
@@ -40,6 +40,7 @@
         </div>
     </nav>
     <div class="container body-content">
+        <img src="http://i.imgur.com/8UNgWez.png">
         <h2>@ViewBag.Title</h2>
         @RenderBody()
         <hr />
@@ -48,9 +49,8 @@
            
                 <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
                 <small><i><a href="" target="_blank" rel="nofollow">more Quotes</a></i></small>
-</footer>
-    </div>
-
+            </footer>
+            </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
