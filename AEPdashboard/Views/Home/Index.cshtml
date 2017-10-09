@@ -2,10 +2,21 @@
     ViewBag.Title = "Operations"; 
     }
 
-    <!-- Plotly.js -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<div class="container">
 
-    @*<style>
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Critical Incidents Response Metric Hit (%)</a>
+
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <!-- Plotly.js -->
+                <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+                @*<style>
             /* On small screens, set height to 'auto' for sidenav and grid */
             media screen and (max-width: 767px) {
                 .sidenav{
@@ -37,43 +48,161 @@
             }
         </style>*@
 
-    <!-- Plotly chart will be drawn inside this DIV -->
-    <div id="myDiv"></div>
-    <script>
-        /* JAVASCRIPT CODE GOES HERE */
-        Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
-            function (err, rows) {
+                <!-- Plotly chart will be drawn inside this DIV -->
+                <div id="myDiv"></div>
+                <script>
+                    /* JAVASCRIPT CODE GOES HERE */
+                    Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
+                        function (err, rows) {
 
-                function unpack(rows, key) {
-                    return rows.map(function (row) { return row[key]; });
-                }
+                            function unpack(rows, key) {
+                                return rows.map(function (row) { return row[key]; });
+                            }
 
-                var trace1 = {
-                    type: "scatter",
-                    mode: "lines",
-                    name: 'AAPL High',
-                    x: unpack(rows, 'Date'),
-                    y: unpack(rows, 'AAPL.High'),
-                    line: { color: '#17BECF' }
-                }
+                            var trace1 = {
+                                type: "scatter",
+                                mode: "lines",
+                                name: 'AAPL High',
+                                x: unpack(rows, 'Date'),
+                                y: unpack(rows, 'AAPL.High'),
+                                line: { color: '#17BECF' }
+                            }
 
-                var trace2 = {
-                    type: "scatter",
-                    mode: "lines",
-                    name: 'AAPL Low',
-                    x: unpack(rows, 'Date'),
-                    y: unpack(rows, 'AAPL.Low'),
-                    line: { color: '#7F7F7F' }
-                }
+                            var trace2 = {
+                                type: "scatter",
+                                mode: "lines",
+                                name: 'AAPL Low',
+                                x: unpack(rows, 'Date'),
+                                y: unpack(rows, 'AAPL.Low'),
+                                line: { color: '#7F7F7F' }
+                            }
 
-                var data = [trace1, trace2];
+                            var data = [trace1, trace2];
 
-                var layout = {
-                    title: '# of critical incidents resolved',
-                };
+                            var layout = {
+                                title: '',
+                            };
 
-                Plotly.newPlot('myDiv', data, layout);
-            })
-    </script>
+                            Plotly.newPlot('myDiv', data, layout);
+                        })
+                </script>
 
-    <hr>
+                <hr> 
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Critical Incidents Resolve Metric Hit (%)</a>
+                </h4>
+            </div>
+
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">-----</div><br>
+
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">High Incidents Response Metric Hit (%)</a>
+                </h4>
+            </div>
+
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">-----</div><br>
+
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">High Incidents Resolved Metric Hit (%)</a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">----</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"># of Critical Incidents Reported</a>
+                </h4>
+            </div>
+
+            <div id="collapse5" class="panel-collapse collapse">
+                <div class="panel-body">-----</div><br>
+
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6"># of Critical Incidents Resolved</a>
+                </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse">
+                <div class="panel-body">-----</div><br>
+
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7"># of High Incidents Reported</a>
+                </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse">
+                <div class="panel-body">----</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse8"># of High Incidents Resolved</a>
+                </h4>
+            </div>
+
+            <div id="collapse8" class="panel-collapse collapse">
+                <div class="panel-body">-----</div><br>
+
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Service Desk Average Speed of Answer</a>
+                </h4>
+            </div>
+            <div id="collapse9" class="panel-collapse collapse">
+                <div class="panel-body">-----</div><br>
+
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">% Change in Ticket Backlog</a>
+                </h4>
+            </div>
+            <div id="collapse10" class="panel-collapse collapse">
+                <div class="panel-body">----</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">Network Reliability: Reachability</a>
+                </h4>
+            </div>
+
+            <div id="collapse11" class="panel-collapse collapse">
+                <div class="panel-body">-----</div><br>
+
+            </div>
+        </div>
+    </div>
+
+
+    
