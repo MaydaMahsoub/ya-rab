@@ -1,4 +1,4 @@
-﻿
+﻿@model List<AEPdashboard.Models.SCORECARD_FACT>
 @{
     ViewBag.Title = "Social Activity";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -14,7 +14,7 @@
                 </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Crystal_personal.svg/2000px-Crystal_personal.svg.png" alt="pictures" style="width:200px;height:150px;"></img>
+                <img src="http://www.johnson.cornell.edu/people/faculty/mdb327/mdb327_profile.jpg" alt="pictures" style="width:200px;height:200px;"></img>
                 <table class="prof_table">
                     <tbody>
                         <tr>
@@ -30,12 +30,12 @@
                         <tr>
                             <td>Department Name:</td>
                             <td width="1em"</td>
-                            <td>icstars|*Columbus</td>
+                            <td>Quality Assurance</td>
                         </tr>
                         <tr>
                             <td>Narrative:</td>
                             <td width="1em"</td>
-                            <td>bla bla bla</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
                         </tr>
 
                     </tbody>
@@ -64,8 +64,12 @@
                 </div>
                
                 <div id="collapse3" class="panel-collapse collapse">
-                    <div class="panel-body">-----</div><br>
-
+                    <div class="panel-body">
+                        @{
+                            var item1 = Model.Find(x => x.MEASURE_ID == 4);
+                            <b>@item1.MEASURE_VALUE%</b>
+                        }
+                        </div><br>
                 </div>
             </div>
             <div class="panel panel-default">
@@ -75,7 +79,12 @@
                     </h4>
                 </div>
                 <div id="collapse4" class="panel-collapse collapse">
-                    <div class="panel-body">----</div>
+                    <div class="panel-body">
+                        @{
+                            var item2 = Model.Find(x => x.MEASURE_ID == 6);
+                            <b>@item2.MEASURE_VALUE</b>
+                        }
+                    </div>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -87,7 +96,10 @@
 
                     <div id="collapse5" class="panel-collapse collapse">
                         <div class="panel-body">
-                            
+                            @{
+                                var item3 = Model.Find(x => x.MEASURE_ID == 7);
+                                <b>@item3.MEASURE_VALUE</b>
+                            }
                             </div><br>
                        
                     </div>
@@ -100,6 +112,14 @@
                     </div>
                     <div id="collapse6" class="panel-collapse collapse">
                         <div class="panel-body">
+                        @{
+                            var item4 = Model.Find(x => x.MEASURE_ID == 5);
+                            <b>@item4.MEASURE_ENTITY_TYPE_1</b>
+                            <b>@item4.MEASURE_ENTITY_TYPE_1</b>
+                            <b>@item4.MEASURE_ENTITY_2</b>
+                            <b>@item4.MEASURE_ENTITY_TYPE_2</b>
+                            <b>@item4.MEASURE_VALUE</b>
+                        }
                             <table class="prof_table">
                                 <tbody>
                                     <tr>

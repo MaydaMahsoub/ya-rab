@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<AEPdashboard.Models.SCORECARD_FACT>
+@{
     ViewBag.Title = "Improvement & Safety";
 }
 <div class="container">
@@ -11,7 +12,12 @@
                 </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
-                <div class="panel-body">-----</div><br>
+                <div class="panel-body">
+                    @{
+                        var item1 = Model.Find(x => x.MEASURE_ID == 10);
+                        <b>@item1.MEASURE_VALUE</b>
+                    }
+                    </div><br>
 
             </div>
         </div>
@@ -22,7 +28,12 @@
                 </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse">
-                <div class="panel-body">-----</div><br>
+                <div class="panel-body">
+                    @{
+                        var item2 = Model.Find(x => x.MEASURE_ID == 11);
+                        <b>@item2.MEASURE_VALUE%</b>
+                    }
+                    </div><br>
 
             </div>
         </div>
@@ -33,7 +44,12 @@
                 </h4>
             </div>
             <div id="collapse3" class="panel-collapse collapse">
-                <div class="panel-body">-----</div><br>
+                <div class="panel-body">
+                    @{
+                        var item3 = Model.Find(x => x.MEASURE_ID == 12);
+                        <b>@item3.MEASURE_VALUE%</b>
+                    }
+                    </div><br>
 
             </div>
         </div>
@@ -44,7 +60,12 @@
                 </h4>
             </div>
             <div id="collapse4" class="panel-collapse collapse">
-                <div class="panel-body">----</div><br>
+                <div class="panel-body">
+                @{
+                    var item4 = Model.Find(x => x.MEASURE_ID == 13);
+                    <b>@item4.MEASURE_VALUE</b>
+                }
+                    </div><br>
             </div>
             </div>
             <div class="panel panel-default">
@@ -55,7 +76,12 @@
                 </div>
              
                 <div id="collapse5" class="panel-collapse collapse">
-                    <div class="panel-body">-----</div><br>
+                    <div class="panel-body">
+                    @{
+                        var item5 = Model.Find(x => x.MEASURE_ID == 1);
+                        <b>@item5.MEASURE_VALUE</b>
+                    }
+            </div><br>
               </div>
                 </div>
             <div class="panel panel-default">
@@ -66,15 +92,11 @@
                 </div>
                 <div id="collapse6" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <ol>
-                            @foreach (var item in Model)
-                            {
-
-                                <li>var a = Model.Find(x =>)</li>
-                                <li>@.MEASURE_ID</li>
-
-                            }
-                        </ol>
+                       
+                       @{ 
+                           var item6 = Model.Find(x => x.MEASURE_ID == 2);
+                           <b>@item6.MEASURE_VALUE</b>
+                       }
          
                      
                         </div><br>
@@ -87,7 +109,11 @@
                         </h4>
                     </div>
                     <div id="collapse7" class="panel-collapse collapse">
-                        <div class="panel-body">-----</div><br>
+                        <div class="panel-body">
+                        @{
+                            var item7 = Model.Find(x => x.MEASURE_ID == 3);
+                            <b>@item7.MEASURE_VALUE</b>
+                        }</div><br>
                     </div>
             </div>
 </div>
