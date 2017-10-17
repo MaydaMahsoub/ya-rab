@@ -31,3 +31,7 @@ textarea {
     color: #ffffff
 }
 
+@media print {
+    * {
+        color: #ffffff !important;
+        

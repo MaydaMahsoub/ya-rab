@@ -7,18 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AEPdashboard
+namespace AEPdashboard.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class MEASURE_DIM
+    public partial class SCORECARD_FACT
     {
+        public decimal CATEGORY_ID { get; set; }
+        public decimal DATE_ID { get; set; }
         public decimal MEASURE_ID { get; set; }
-        public string MEASURE_NAME { get; set; }
-        public string MEASURE_DESC { get; set; }
-        public string MEASURE_TYPE { get; set; }
-        public decimal RPT_FREQ_ID { get; set; }
+        public string MEASURE_ENTITY_1 { get; set; }
+        public string MEASURE_ENTITY_TYPE_1 { get; set; }
+        public string MEASURE_ENTITY_2 { get; set; }
+        public string MEASURE_ENTITY_TYPE_2 { get; set; }
+        public string MEASURE_VALUE { get; set; }
         public Nullable<System.DateTime> LAST_UPDT_DTTM { get; set; }
         public string LAST_UPDT_ID { get; set; }
     }

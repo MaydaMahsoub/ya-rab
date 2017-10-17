@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 using System.Web.Mvc;
+using System.Data;
+using System.Data.EntityClient;
+using System.Data.Objects;
 
 namespace AEPdashboard.Controllers
 {
@@ -23,18 +26,11 @@ namespace AEPdashboard.Controllers
             return View();
         }
 
-        public ActionResult Socialactivity()
+        public ActionResult Socialactivity()   
         {
             return View();
         }
 
         
-
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-
-        //    return View();
-        //}
     }
 }

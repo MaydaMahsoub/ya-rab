@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AEPdashboard
+namespace AEPdashboard.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class AEPDB : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public AEPDB()
+            : base("name=AEPDB")
         {
         }
     
@@ -25,11 +25,6 @@ namespace AEPdashboard
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CATEGORY_DIM> CATEGORY_DIM { get; set; }
-        public virtual DbSet<MEASURE_DIM> MEASURE_DIM { get; set; }
-        public virtual DbSet<RPT_FREQ_DIM> RPT_FREQ_DIM { get; set; }
-        public virtual DbSet<AEP_DATE> AEP_DATE { get; set; }
         public virtual DbSet<SCORECARD_FACT> SCORECARD_FACT { get; set; }
-        public virtual DbSet<SCORECARD_PHOTO_FACT> SCORECARD_PHOTO_FACT { get; set; }
     }
 }
