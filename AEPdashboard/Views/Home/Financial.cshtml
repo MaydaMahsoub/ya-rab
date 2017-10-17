@@ -8,160 +8,170 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">CI projects over/under estimate % by BU</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Class 5 estimate tolerance adherence (+100/-50) for all apps</a>
                 </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
                 <div class="panel-body">
                 @{
-                    var item1 = Model.Find(x => x.MEASURE_ID == 14);
+                    var item1 = Model.Find(x => x.MEASURE_ID == 12);
                     <b>@item1.MEASURE_VALUE</b>
                 }
                     </div><br>
-
             </div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">CI projects % on budget</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Class 4 estimate tolerance adherance (+50/-30) for all apps</a>
                 </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse">
                 <div class="panel-body">
-                @{
-                    var item2 = Model.Find(x => x.MEASURE_ID == 17);
-                    <b>@item2.MEASURE_VALUE%</b>
-                }
-                    </div><br>
-
+                    @{
+                        var item10 = Model.Find(x => x.MEASURE_ID == 13);
+                        <b>@item10.MEASURE_VALUE</b>
+                    }
+                </div><br>
             </div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"># Active projects</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Class 2 estimate tolerance adherance (+20/-15) for all apps</a>
                 </h4>
             </div>
             <div id="collapse3" class="panel-collapse collapse">
                 <div class="panel-body">
                     @{
-                        var item3 = Model.Find(x => x.MEASURE_ID == 18);
-                        <b>@item3.MEASURE_VALUE</b>
+                        var item11 = Model.Find(x => x.MEASURE_ID == 14);
+                        <b>@item11.MEASURE_VALUE</b>
                     }
+                </div><br>
+              </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">CI projects % on budget</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        @{
+                            var item2 = Model.Find(x => x.MEASURE_ID == 15);
+                            <b>@item2.MEASURE_VALUE%</b>
+                        }
                     </div><br>
 
+                </div>
             </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">CI projects % on budget</a>
-                </h4>
-            </div>
-            <div id="collapse4" class="panel-collapse collapse">
-                <div class="panel-body">
-                    @{
-                        var item4 = Model.Find(x => x.MEASURE_ID == 19);
-                        <b>@item4.MEASURE_VALUE%</b>
-                    }
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"># active projects</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        @{
+                            var item3 = Model.Find(x => x.MEASURE_ID == 18);
+                            <b>@item3.MEASURE_VALUE</b>
+                        }
                     </div><br>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Active projects</a>
-                </h4>
-            </div>
-            <div id="collapse5" class="panel-collapse collapse">
-                <div class="panel-body">
-                    @{
-                        var item5 = Model.Find(x => x.MEASURE_ID == 20);
-                        <b>@item5.MEASURE_VALUE%</b>
-                    }
-                    </div><br>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">% Active projects on budget</a>
-                </h4>
-            </div>
-            <div id="collapse6" class="panel-collapse collapse">
-                <div class="panel-body">
-                @{
-                    var item6 = Model.Find(x => x.MEASURE_ID == 21);
-                    <b>@item6.MEASURE_VALUE%</b>
-                }
-                    </div><br>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">% Active projects on schedule</a>
-                </h4>
-            </div>
 
-            <div id="collapse7" class="panel-collapse collapse">
-                <div class="panel-body">
-                @{
-                    var item7 = Model.Find(x => x.MEASURE_ID == 22);
-                    <b>@item7.MEASURE_VALUE%</b>
-                }
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">% active projects on budget</a>
+                    </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        @{
+                            var item4 = Model.Find(x => x.MEASURE_ID == 19);
+                            <b>@item4.MEASURE_VALUE%</b>
+                        }
                     </div><br>
+                </div>
             </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Closed project business partner satisfaction %</a>
-                </h4>
-            </div>
-            <div id="collapse8" class="panel-collapse collapse">
-                <div class="panel-body">
-                    @{
-                        var item8 = Model.Find(x => x.MEASURE_ID == 23);
-                        <b>@item8.MEASURE_VALUE%</b>
-                    }
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">% active projects on schedule</a>
+                    </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        @{
+                            var item5 = Model.Find(x => x.MEASURE_ID == 20);
+                            <b>@item5.MEASURE_VALUE%</b>
+                        }
                     </div><br>
+                </div>
             </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Closed project budget %</a>
-                </h4>
-            </div>
-            <div id="collapse9" class="panel-collapse collapse">
-                <div class="panel-body">
-                    @{
-                        var item9 = Model.Find(x => x.MEASURE_ID == 24);
-                        <b>@item9.MEASURE_VALUE%</b>
-                    }
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Closed project business partner satisfaction %</a>
+                    </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        @{
+                            var item6 = Model.Find(x => x.MEASURE_ID == 21);
+                            <b>@item6.MEASURE_VALUE%</b>
+                        }
                     </div><br>
+                </div>
             </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Telecom programs: Cisco EOL % complete</a>
-                </h4>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Closed project budget %</a>
+                    </h4>
+                </div>
+
+                <div id="collapse9" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        @{
+                            var item7 = Model.Find(x => x.MEASURE_ID == 22);
+                            <b>@item7.MEASURE_VALUE%</b>
+                        }
+                    </div><br>
+                </div>
             </div>
-            <div id="collapse10" class="panel-collapse collapse">
-                <div class="panel-body">----</div><br>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Telecom programs: Cisco EOL % complete</a>
+                    </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        @{
+                            var item8 = Model.Find(x => x.MEASURE_ID == 23);
+                            <b>@item8.MEASURE_VALUE%</b>
+                        }
+                    </div><br>
+                </div>
             </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">Telecom programs: SCADA and transport upgrades % complete</a>
-                </h4>
-            </div>
-            <div id="collapse11" class="panel-collapse collapse">
-                <div class="panel-body">-----</div><br>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">Telecom programs: SCADA & transport upgrades % complete</a>
+                    </h4>
+                </div>
+                <div id="collapse11" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        @{
+                            var item9 = Model.Find(x => x.MEASURE_ID == 24);
+                            <b>@item9.MEASURE_VALUE%</b>
+                        }
+                    </div><br>
+                </div>
             </div>
         </div>
     </div>

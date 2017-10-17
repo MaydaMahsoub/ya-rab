@@ -11,23 +11,56 @@
     <nav class="navbar navbar-inverse top-nav">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-menu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+
+                    <style>
+                        /* On small screens, set height to 'auto' for sidenav and grid */
+
+                        media screen and (max-width: 767px) .sidenav {
+                            height: auto;
+                            padding: 15px;
+                        }
+                        /* unvisited link white */
+                        #top-menu a:link {
+                            color: #ffffff;
+                        }
+                        /* visited link white */
+                        #top-menu a:visited {
+                            color: #ffffff;
+                        }
+                        /* mouse over link grey */
+                        #top-menu a:hover {
+                            color: #777777;
+                        }
+                        /* selected link grey */
+                        #top-menu a:active {
+                            color: #777777;
+                        }
+                        /* !IMPORTANT ONLY ADD THIS CLASS TO YOUR ACTIVE PAGE LINK ( Color dark red )*/
+                        .activePage a {
+                            color: #8b0000 !IMPORTANT
+                        }
+
+                        #top-menu
+                        }
+                    </style>
+
                 </button>
                 <a class="navbar-brand"></a>
                 <img src="/Pictures/AEP_Tag_RGB.jpg">
             </div>
 
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse" id="top-menu">
                 <ul class="nav navbar-nav">
                     @*<li><a href="../Home/Index.cshtml">HomePage</a></li>*@
-                    <li>@Html.ActionLink("Operations", "Index", "Home", new { area = "" }, new { @class = "myNavbar" })</li>
-                    <li>@Html.ActionLink("Improvement & Safety", "IS", "Home", new { area = "" }, new { @class = "myNavbar" })</li>
-                    <li>@Html.ActionLink("Financial", "Financial", "Home", new { area = "" }, new { @class = "myNavbar" })</li>
+                    <li>@Html.ActionLink("Operations", "Index", "Home", new { area = "" }, new { @class = "navbar-band" })</li>
+                    <li>@Html.ActionLink("Improvement & Safety", "IS", "Home", new { area = "" }, new { @class = "navbar-band" })</li>
+                    <li>@Html.ActionLink("Financial", "Financial", "Home", new { area = "" }, new { @class = "navbar-band" })</li>
                     @*<li><a href="/Views/Shared/Error.cshtml">ErrorPagee</a></li>*@
-                    <li>@Html.ActionLink("Social Activity", "Socialactivity", "Home", new { area = "" }, new { @class = "myNavbar" })</li>
+                    <li>@Html.ActionLink("Social Activity", "Socialactivity", "Home", new { area = "" }, new { @class = "navbar-band" })</li>
 
                 </ul>
                    <nav class="nav navbar-nav navbar-right">
@@ -48,7 +81,7 @@
         <footer class="footer container-fluid text-center">
            
                 <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
-                <small><i><a href="" target="_blank" rel="nofollow">more Quotes</a></i></small>
+                
             </footer>
             </div>
     @Scripts.Render("~/bundles/jquery")

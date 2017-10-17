@@ -20,22 +20,22 @@
                         <tr>
                             <td>Employee No.:</td>
                             <td width="1em"</td>
-                            <td>#HAPU04</td>
+                            <td><b>#HAPU04</b></td>
                         </tr>
                         <tr>
                             <td>Name:</td>
                             <td width="1em"</td>
-                            <td>Bobby White</td>
+                            <td><b>Bobby White</b></td>
                         </tr>
                         <tr>
                             <td>Department Name:</td>
                             <td width="1em"</td>
-                            <td>Quality Assurance</td>
+                            <td><b>Quality Assurance</b></td>
                         </tr>
                         <tr>
                             <td>Narrative:</td>
                             <td width="1em"</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                            <td><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b></td>
                         </tr>
 
                     </tbody>
@@ -114,33 +114,29 @@
                         <div class="panel-body">
                         @{
                             var item4 = Model.Find(x => x.MEASURE_ID == 5);
-                            <b>@item4.MEASURE_ENTITY_TYPE_1</b>
-                            <b>@item4.MEASURE_ENTITY_TYPE_1</b>
-                            <b>@item4.MEASURE_ENTITY_2</b>
-                            <b>@item4.MEASURE_ENTITY_TYPE_2</b>
-                            <b>@item4.MEASURE_VALUE</b>
+                           
                         }
                             <table class="prof_table">
                                 <tbody>
                                     <tr>
-                                        <td>Rcognizee Name:</td>
-                                        <td> width="1em"</td>
-                                        <td>#HAPU04</td>
+                                        <td>Recognizee Name:</td>
+                                        <td></td>
+                                        <td><b>@item4.MEASURE_ENTITY_2</b></td>
                                     </tr>
                                     <tr>
                                         <td>Recognizee Department Name:</td>
-                                        <td> width="1em"</td>
-                                        <td>Bobby White</td>
+                                        <td></td>
+                                        <td><b>----</b></td>
                                     </tr>
                                     <tr>
                                         <td>Recognizer:</td>
                                         <td width="1em"</td>
-                                        <td>icstars|*Columbus</td>
+                                        <td><b>@item4.MEASURE_ENTITY_1</b></td>
                                     </tr>
                                     <tr>
                                         <td>Narrative:</td>
                                         <td width="1em"</td>
-                                        <td>bla bla bla</td>
+                                        <td><b>@item4.MEASURE_VALUE</b></td>
                                     </tr>
 
                                 </tbody>

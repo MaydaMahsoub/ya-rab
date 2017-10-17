@@ -10,103 +10,34 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Critical Incidents Response Metric Hit (%)</a>
-
                     </h4>
                 </div>
+
                 <div id="collapse1" class="panel-collapse collapse">
-                    <center>
-                    <!-- Plotly.js -->
-                    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-                    <style>
-                        /* On small screens, set height to 'auto' for sidenav and grid */
-                        
-                        media screen and (max-width: 767px) 
-                            .sidenav
-                        {
-                            height: auto;
-                            padding: 15px;
+                    <div class="panel-body">
+                        @{
+                            var item12 = Model.Find(x => x.MEASURE_ID == 25);
+                            <b>@item12.MEASURE_VALUE%</b>
                         }
-                        /* unvisited link white */
-                        #top-menu a:link {
-                            color: #ffffff;
-                        }
-                        /* visited link white */
-                        #top-menu a:visited {
-                            color: #ffffff;
-                        }
-                        /* mouse over link grey */
-                        #top-menu a:hover {
-                            color: #777777;
-                        }
-                        /* selected link grey */
-                        #top-menu a:active {
-                            color: #777777;
-                        }
-                        /* !IMPORTANT ONLY ADD THIS CLASS TO YOUR ACTIVE PAGE LINK ( Color dark red )*/
-                        .activePage a {
-                            color: #8b0000 !IMPORTANT
-                        }
-
-                        #top-menu
-                        }
-
-                    </style>
-
-                    <!-- Plotly chart will be drawn inside this DIV -->
-                    <div id="myDiv"></div>
-                    <script>
-                        /* JAVASCRIPT CODE GOES HERE */
-                        Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
-                            function (err, rows) {
-
-                                function unpack(rows, key) {
-                                    return rows.map(function (row) { return row[key]; });
-                                }
-
-                                var trace1 = {
-                                    type: "scatter",
-                                    mode: "lines",
-                                    name: 'AAPL High',
-                                    x: unpack(rows, 'Date'),
-                                    y: unpack(rows, 'AAPL.High'),
-                                    line: { color: '#17BECF' }
-                                }
-
-                                var trace2 = {
-                                    type: "scatter",
-                                    mode: "lines",
-                                    name: 'AAPL Low',
-                                    x: unpack(rows, 'Date'),
-                                    y: unpack(rows, 'AAPL.Low'),
-                                    line: { color: '#7F7F7F' }
-                                }
-
-                                var data = [trace1, trace2];
-
-                                var layout = {
-                                    title: '',
-                                };
-
-                                Plotly.newPlot('myDiv', data, layout);
-
-
-                            })
-                    </script>
-                    </center>
-
+                        </div><br>
+                    
                     <hr>
-                </div>
+               </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Critical Incidents Resolve Metric Hit (%)</a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Critical Incidents Resolve Metric Hit (%)</a>
                     </h4>
                 </div>
 
-                <div id="collapse3" class="panel-collapse collapse">
-                    <div class="panel-body">-----</div><br>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        @{
+                            var item13 = Model.Find(x => x.MEASURE_ID == 26);
+                            <b>@item13.MEASURE_VALUE%</b>
+                        }
+                        </div><br>
 
                 </div>
             </div>
@@ -118,7 +49,12 @@
                 </div>
 
                 <div id="collapse3" class="panel-collapse collapse">
-                    <div class="panel-body">-----</div><br>
+                    <div class="panel-body">
+                        @{
+                            var item14 = Model.Find(x => x.MEASURE_ID == 27);
+                            <b>@item14.MEASURE_VALUE%</b>
+                        }
+                        </div><br>
 
                 </div>
             </div>
@@ -129,7 +65,12 @@
                     </h4>
                 </div>
                 <div id="collapse4" class="panel-collapse collapse">
-                    <div class="panel-body">----</div>
+                    <div class="panel-body">
+                        @{
+                            var item15 = Model.Find(x => x.MEASURE_ID == 28);
+                            <b>@item15.MEASURE_VALUE%</b>
+                        }
+                    </div>
                 </div>
             </div>
             <div class="panel panel-default">
@@ -140,7 +81,12 @@
                 </div>
 
                 <div id="collapse5" class="panel-collapse collapse">
-                    <div class="panel-body">-----</div><br>
+                    <div class="panel-body">
+                        @{
+                            var item16 = Model.Find(x => x.MEASURE_ID == 30);
+                            <b>@item16.MEASURE_VALUE</b>
+                        }
+                        </div><br>
 
                 </div>
             </div>
@@ -151,7 +97,12 @@
                     </h4>
                 </div>
                 <div id="collapse6" class="panel-collapse collapse">
-                    <div class="panel-body">-----</div><br>
+                    <div class="panel-body">
+                        @{
+                            var item17 = Model.Find(x => x.MEASURE_ID == 31);
+                            <b>@item17.MEASURE_VALUE</b>
+                        }
+                        </div><br>
 
                 </div>
             </div>
@@ -162,7 +113,12 @@
                     </h4>
                 </div>
                 <div id="collapse7" class="panel-collapse collapse">
-                    <div class="panel-body">----</div>
+                    <div class="panel-body">
+                        @{
+                            var item18 = Model.Find(x => x.MEASURE_ID == 37);
+                            <b>@item18.MEASURE_VALUE</b>
+                        }
+                    </div>
                 </div>
             </div>
             <div class="panel panel-default">
@@ -173,7 +129,12 @@
                 </div>
 
                 <div id="collapse8" class="panel-collapse collapse">
-                    <div class="panel-body">-----</div><br>
+                    <div class="panel-body">
+                        @{
+                            var item19 = Model.Find(x => x.MEASURE_ID == 38);
+                            <b>@item19.MEASURE_VALUE</b>
+                        }
+                        </div><br>
 
                 </div>
             </div>
@@ -184,7 +145,12 @@
                     </h4>
                 </div>
                 <div id="collapse9" class="panel-collapse collapse">
-                    <div class="panel-body">-----</div><br>
+                    <div class="panel-body">
+                        @{
+                            var item20 = Model.Find(x => x.MEASURE_ID == 29);
+                            <b>@item20.MEASURE_VALUE</b>
+                        }
+                        </div><br>
 
                 </div>
             </div>
@@ -195,7 +161,12 @@
                     </h4>
                 </div>
                 <div id="collapse10" class="panel-collapse collapse">
-                    <div class="panel-body">----</div>
+                    <div class="panel-body">
+                        @{
+                            var item21 = Model.Find(x => x.MEASURE_ID == 34);
+                            <b>@item21.MEASURE_VALUE%</b>
+                        }
+                    </div>
                 </div>
             </div>
             <div class="panel panel-default">
@@ -204,9 +175,29 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">Network Reliability: Reachability</a>
                     </h4>
                 </div>
+            </div>
 
                 <div id="collapse11" class="panel-collapse collapse">
-                    <div class="panel-body">-----</div><br>
+                    <div class="panel-body">
+                        @{
+                            var item22 = Model.Find(x => x.MEASURE_ID == 33);
+                            <b>@item22.MEASURE_VALUE</b>
+                        }
+                        </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Network Reliability: Latency</a>
+                    </h4>
+                </div>
+
+                <div id="collapse12" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        @{
+                            var item23 = Model.Find(x => x.MEASURE_ID == 34);
+                            <b>@item23.MEASURE_VALUE</b>
+                        }
+                        </div>
 
             </div>
         </div>
